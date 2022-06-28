@@ -58,6 +58,20 @@ textarea::-webkit-scrollbar-thumb{
     border-radius: 10px;
 }
 
+.synopse{
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    outline: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: #2d2d2d;
+    resize: none;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .title::placeholder,
 .article::placeholder{
     color: #2d2d2d;
@@ -92,9 +106,119 @@ textarea::-webkit-scrollbar-thumb{
     cursor: pointer;
 }
 
+.m-r-5{
+    margin-right: 5px;
+}
+
 .btn.grey{
     background: #a5a5a5;
     color: #fff;
     margin-left: 20px;
     font-size: 14px;
+}
+
+.img-card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-card{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: gray;
+}
+.img-card-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.img-card-overlay-content{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+.close-modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.line-top{
+    width: 100%;
+    height: 1px;
+    background: #e7e7e7;
+    margin: 20px 0;
+}
+
+.line-bottom{
+    width: 100%;
+    height: 1px;
+    background: #e7e7e7;
+    margin: 20px 0;
+}
+.close{
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-danger{
+    background: #ff0000;
+    color: #fff;
+    font-size: 14px;
+}
+
+.img-thumbnail{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: gray;
 }

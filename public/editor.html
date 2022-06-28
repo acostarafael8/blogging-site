@@ -8,8 +8,14 @@
 
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/editor.css">
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
-</head>
+</head><script>
+    tinymce.init({
+      selector: '#mytextarea',
+    plugins: 'code'
+    });
+  </script>
 <body>
 
     <div class="banner">
@@ -19,11 +25,17 @@
     
     <div class="blog">
         <textarea type="text" class="title" placeholder="Blog title..."></textarea>
-        <textarea type="text" class="article" placeholder="Start writing here..."></textarea>
+        <textarea type="text" class="synopse" placeholder="Synopse"></textarea>
+        <!-- <textarea type="text" class="article" placeholder="Start writing here..."></textarea> -->
+        <form method="post" class="article">
+            <textarea id="mytextarea"></textarea>
+          </form>
     </div>
 
     <div class="blog-options">
-        <button class="btn dark publish-btn">publish</button>
+        <button class="btn dark publish-btn m-r-5">publish</button>
+        <button class="btn dark vid-btn m-r-5">Add YouTube Video</button>
+        <button class="btn dark img-btn m-r-5">Add Already Saved Image</button>
         <input type="file" accept="image/*" id="image-upload" hidden>
         <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
     </div>
@@ -33,6 +45,13 @@
 
     <script src="js/firebase.js"></script>
     <script src="js/editor.js"></script>
+    <span id="img-modal-close" style="display: none; font-size: 25px;justify-content: right;align-items: right;cursor: pointer; color: red;" onclick="closeImagesModal()">X</span>
+    <div id="img-modal" style="display: none; max-height: 250px; overflow-y: auto;">
+        <div id="images-container">
+
+        </div>
+
+    </div>
 
 </body>
 </html>
